@@ -7,12 +7,12 @@ article: http://ogp.me/ns/article#">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="">
 
-<title>My First Podcast Post || Hexo</title>
+<title>Hexo 常用命令 || Hexo</title>
 <link rel="icon" href="http://example.comimages/wang.icon" type="image/x-icon">
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<meta property="og:title" content="My First Podcast Post">
+<meta property="og:title" content="Hexo 常用命令">
 <meta property="og:type" content="website">
-<meta property="og:url" content="http://example.com/2026/01/29/My-First-Podcast-Post/index.html">
+<meta property="og:url" content="http://example.com/2026/01/29/Hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
 <meta property="og:image" content="">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:author" content="John Doe">
@@ -20,7 +20,7 @@ article: http://ogp.me/ns/article#">
   
   
   
-  <meta name="description" content="Hello!这是我的第一篇播客文章测试。">
+  <meta name="description" content="🚀Hexo常用命令手册这是Hexo静态博客搭建与日常维护的常用命令汇总。1.核心流程（最常用）这是你每次写完文章后，发布到GitHub所需的“三部曲”：命令简写作用hexoclean无清理缓存：删除旧的静态文件(public文件夹)hexogeneratehexog生成静态文件：将Markdown转换为HT">
 
 
 <script src="/js/wang.js"></script>
@@ -197,20 +197,122 @@ article: http://ogp.me/ns/article#">
 </aside>
 <div class="post-container">
   <article class="post">
-    <h1 class="post-title">My First Podcast Post</h1>
+    <h1 class="post-title">Hexo 常用命令</h1>
 
     <div class="post-meta">
-      <span class="post-date">Posted on <time datetime="2026-01-29T13:07:17.000Z">2026-01-29</time></span>
+      <span class="post-date">Posted on <time datetime="2026-01-29T13:33:37.000Z">2026-01-29</time></span>
       
       
         <span class="post-updated">
-          Last Updated <time datetime="2026-01-29T13:21:47.043Z">2026-01-29</time>
+          Last Updated <time datetime="2026-01-29T13:34:09.572Z">2026-01-29</time>
         </span>
       
       <span style="margin-left:10px;">👁<span id="busuanzi_value_page_pv"></span></span>
     </div>
     <div class="post-content">
-      <p>Hello! 这是我的第一篇播客文章测试。</p>
+      <h1 id="🚀-Hexo-常用命令手册"><a href="#🚀-Hexo-常用命令手册" class="headerlink" title="🚀 Hexo 常用命令手册"></a>🚀 Hexo 常用命令手册</h1><p>这是 Hexo 静态博客搭建与日常维护的常用命令汇总。</p>
+<h2 id="1-核心流程（最常用）"><a href="#1-核心流程（最常用）" class="headerlink" title="1. 核心流程（最常用）"></a>1. 核心流程（最常用）</h2><p>这是你每次写完文章后，发布到 GitHub 所需的“三部曲”：</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">简写</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>hexo clean</code></td>
+<td align="left">无</td>
+<td align="left"><strong>清理缓存</strong>：删除旧的静态文件 (public 文件夹)</td>
+</tr>
+<tr>
+<td align="left"><code>hexo generate</code></td>
+<td align="left"><code>hexo g</code></td>
+<td align="left"><strong>生成静态文件</strong>：将 Markdown 转换为 HTML</td>
+</tr>
+<tr>
+<td align="left"><code>hexo deploy</code></td>
+<td align="left"><code>hexo d</code></td>
+<td align="left"><strong>部署</strong>：将生成的静态文件推送到 GitHub</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>组合技（推荐）：</strong><br><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>  # 一次性完成清理、生成和上传</p>
+</blockquote>
+<hr>
+<h2 id="2-文章管理"><a href="#2-文章管理" class="headerlink" title="2. 文章管理"></a>2. 文章管理</h2><p>用于创建新文章或页面。</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>hexo new &quot;标题&quot;</code></td>
+<td align="left"><strong>新建文章</strong>：在 <code>source/_posts</code> 下创建文章</td>
+</tr>
+<tr>
+<td align="left"><code>hexo new page &quot;标题&quot;</code></td>
+<td align="left"><strong>新建页面</strong>：创建一个独立页面（如“关于我”）</td>
+</tr>
+<tr>
+<td align="left"><code>hexo publish [layout] &lt;filename&gt;</code></td>
+<td align="left">将草稿发布为正式文章</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="3-本地预览"><a href="#3-本地预览" class="headerlink" title="3. 本地预览"></a>3. 本地预览</h2><p>在正式发布前，先在本地查看效果。</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">简写</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>hexo server</code></td>
+<td align="left"><code>hexo s</code></td>
+<td align="left"><strong>启动本地服务器</strong>：默认地址 <code>http://localhost:4000</code></td>
+</tr>
+<tr>
+<td align="left"><code>hexo server -p 5000</code></td>
+<td align="left">无</td>
+<td align="left">更改端口号（如果 4000 被占用）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="4-初始化与安装"><a href="#4-初始化与安装" class="headerlink" title="4. 初始化与安装"></a>4. 初始化与安装</h2><p>通常只在更换电脑或首次搭建时使用。</p>
+<table>
+<thead>
+<tr>
+<th align="left">命令</th>
+<th align="left">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>npm install -g hexo-cli</code></td>
+<td align="left">全局安装 Hexo 客户端</td>
+</tr>
+<tr>
+<td align="left"><code>hexo init [folder]</code></td>
+<td align="left">初始化博客文件夹</td>
+</tr>
+<tr>
+<td align="left"><code>npm install</code></td>
+<td align="left">在博客目录下安装所有必要的依赖包</td>
+</tr>
+<tr>
+<td align="left"><code>npm install hexo-deployer-git --save</code></td>
+<td align="left">安装 Git 部署插件（发布 GitHub 必装）</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="5-进阶参数（Debug）"><a href="#5-进阶参数（Debug）" class="headerlink" title="5. 进阶参数（Debug）"></a>5. 进阶参数（Debug）</h2><p>当遇到报错（如你之前的 YAML 报错）时，可以用来排查。</p>
+<ul>
+<li><code>hexo g --watch</code>：监视文件变动，保存即自动重新</li>
+</ul>
 
     </div>
   </article>
@@ -225,7 +327,7 @@ article: http://ogp.me/ns/article#">
                     </div>
                     <div class="title">
                         <p>Title</p>
-                        <p>My First Podcast Post</p>
+                        <p>Hexo 常用命令</p>
                     </div>
                         <div class="publish">
                             <p>Published</p>
@@ -251,14 +353,9 @@ article: http://ogp.me/ns/article#">
     
       <div class="post-prev">
         <span class="nav-label">Previous Post</span>
-        <a href="/2026/01/29/hello-world/">Hello World</a>
+        <a href="/2026/01/29/My-First-Podcast-Post/">My First Podcast Post</a>
       </div>
     
-    
-      <div class="post-next">
-        <span class="nav-label">Next Post</span>
-        <a href="/2026/01/29/Hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Hexo 常用命令</a>
-      </div>
     
   </nav>
   
@@ -333,10 +430,12 @@ article: http://ogp.me/ns/article#">
 
     </div>
     <div class="sidebar-bg">
-        
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%F0%9F%9A%80-Hexo-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%89%8B%E5%86%8C"><span class="toc-number">1.</span> <span class="toc-text">🚀 Hexo 常用命令手册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B%EF%BC%88%E6%9C%80%E5%B8%B8%E7%94%A8%EF%BC%89"><span class="toc-number">1.1.</span> <span class="toc-text">1. 核心流程（最常用）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%87%E7%AB%A0%E7%AE%A1%E7%90%86"><span class="toc-number">1.2.</span> <span class="toc-text">2. 文章管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9C%AC%E5%9C%B0%E9%A2%84%E8%A7%88"><span class="toc-number">1.3.</span> <span class="toc-text">3. 本地预览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%8E%E5%AE%89%E8%A3%85"><span class="toc-number">1.4.</span> <span class="toc-text">4. 初始化与安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%BF%9B%E9%98%B6%E5%8F%82%E6%95%B0%EF%BC%88Debug%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">5. 进阶参数（Debug）</span></a></li></ol></li></ol>
     </div>
     <div class="sidebar-bg">
         <div class="card-tags">
+            
+                <a href="/tags/%E5%91%BD%E4%BB%A4/" class="tag" aria-label="标签: #命令">#命令</a>
             
         </div>
     </div>
