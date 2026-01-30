@@ -25,6 +25,7 @@ jobs:
     - name: Install Dependencies
       run: |
         npm install
+        npm install hexo-cli --save-dev  # 确保 hexo-cli 可用
         # 如果你有安装 hexo-cli，也可以加上，虽然 npx 也可以运行
 
     - name: Generate Site
