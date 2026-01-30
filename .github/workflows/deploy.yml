@@ -1,0 +1,39 @@
+name: Hexo CI/CD
+
+on:
+  push:
+    branches:
+      - source  # 监听 source 分支的变动 (App 上传会触发这里)
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 赋予 Action 写权限，以便推送到 main 分支
+
+    steps:
+    - name: Checkout Source
+      uses: actions/checkout@v4
+      with:
+        ref: source # 检出源码分支
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20' # 推荐使用较新的 Node
+
+    - name: Install Dependencies
+      run: |
+        npm install
+        # 如果你有安装 hexo-cli，也可以加上，虽然 npx 也可以运行
+
+    - name: Generate Site
+      run: npx hexo generate
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub 自动生成的令牌，无需手动设置
+        publish_dir: ./public
+        publish_branch: main  # 将生成的 HTML 推送到 main 分支 (User Page 必须是 main)
+        commit_message: "Auto deploy from source: ${{ github.sha }}"
